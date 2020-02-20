@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta/>
+<title th:text="#{title}">##타이틀</title>
+<style type="">
+	table {
+		width: 100%;
+		background-color: #9999CC;
+	}
+</style>
+</head>
+<body style="font-family:NanumGothic;">
+	<h1 th:text=#{title}></h1>
+	<table>
+		<thead>
+			<tr>
+				<th th:text="#{header.id}">##ID</th>
+				<th th:text="#{header.name}">##NAME</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="item : ${resultList}">
+				<td th:text="${item.id}">##id</td>
+				<td th:text="${item.name}">##name</td>
+			</tr>
+		</tbody>
+	</table>
+
+	
+</body>
+</html>
